@@ -4,6 +4,10 @@ autoload colors
 antigen bundle heroku lein command-not-found
 setopt prompt_subst
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-syntax-highlighting
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  antigen bundle osx
+fi
 antigen theme akz92/clean
 antigen apply
 export PGHOST=localhost
